@@ -75,7 +75,7 @@ public class Executar {
 				break;
 				
 			case "2":
-				//banco.mostrar(cliente);		
+				banco.mostrar(cliente);		
 			case "3":
 				
 			case "4":

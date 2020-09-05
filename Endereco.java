@@ -32,7 +32,7 @@ public class Endereco {
        return cidade;
    }
 
-   public void setCidade(St0ring cidade){
+   public void setCidade(String cidade){
        this.cidade = cidade;
    }
 

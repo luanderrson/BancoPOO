@@ -16,7 +16,7 @@ public class Conta {
     }
 
     public void setNumeroConta(int numeroConta){
-        this.numeroConta;
+        this.numeroConta = numeroConta;
     }
 
     public double getSaldo(){

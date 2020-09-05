@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Banco {
 
     private List<Cliente> clientes;
 
     public Banco(){
-        this.clientes = new ArrayList<Cliente>;
+        this.clientes = new ArrayList<Cliente>();
     }
 
 
@@ -22,11 +23,12 @@ public class Banco {
             System.out.println("Cliente ja cadastrado !");
         }else{
             this.clientes.add(cliente);
+            System.out.println("Cliente cadastrado com sucesso !");
         }
     }
 
 
-    public mostrar();
-    public sacar();
-    public depositar();
+//    public mostrar();
+//    public sacar();
+//    public depositar();
 }

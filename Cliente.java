@@ -55,7 +55,7 @@ public class Cliente {
         return contato;
     }
 
-    public void Contato setContato(Contato contato){
+    public void setContato(Contato contato){
         this.contato = contato;
     }
 

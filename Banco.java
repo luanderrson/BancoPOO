@@ -10,7 +10,6 @@ public class Banco {
     }
 
 
-
     public void cadastrar (Cliente cliente){
         boolean exist = false;
         for(Cliente c : clientes){

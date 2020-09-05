@@ -11,7 +11,7 @@ public class Cliente {
 
     }
 
-    public String getNome(){
+	public String getNome(){
         return nome;
     }
 
@@ -58,6 +58,14 @@ public class Cliente {
     public void setContato(Contato contato){
         this.contato = contato;
     }
+    
+    public Conta getConta() {
+		return conta;
+	}
+
+	public void setConta(Conta conta) {
+		this.conta = conta;
+	}
 
 }
 

@@ -1,7 +1,7 @@
 public class Endereco {
    private String rua;
    private int numero;
-   private char bairro;
+   private String bairro;
    private String cidade;
 
    public String getRua(){
@@ -20,11 +20,11 @@ public class Endereco {
        this.numero = numero;
    }
 
-   public char getBairro(){
+   public String getBairro(){
        return bairro;
    }
 
-   public void setBairro(char bairro) {
+   public void setBairro(String bairro) {
         this.bairro = bairro;
    }
 

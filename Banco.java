@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
+
+import javax.swing.JOptionPane;
 
 public class Banco {
 
@@ -19,15 +22,20 @@ public class Banco {
             }
         }
         if(exist){
-            System.out.println("Cliente ja cadastrado !");
+            JOptionPane.showMessageDialog(null, "Cliente ja possui cadastro.");
         }else{
             this.clientes.add(cliente);
-            System.out.println("Cliente cadastrado com sucesso !");
-        }
+            JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso :D");    
+        } 
+    }
+    
+    public void mostrar(Cliente cliente) {
+    	for(Cliente c : clientes) {
+    		JOptionPane.showMessageDialog(null, "[CLIENTES CADASTRADOS]\n" + c);
+    	}
     }
 
 
-//    public mostrar();
-//    public sacar();
-//    public depositar();
-}
+  
+  }
+

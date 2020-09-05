@@ -24,15 +24,11 @@ public class Executar {
 				String nome = JOptionPane.showInputDialog("Qual seu nome ? ");
 				cliente.setNome(nome);
 				
-				String sexo = JOptionPane.showInputDialog("Qual seu gênero ?\n [M] - Masculino\n[F] - Feminino");
-				if(sexo.toLowerCase() == "M") {
-					cliente.setSexo('M');
-				}else if (sexo.toLowerCase() == "F") {
-					cliente.setSexo('F');
-				}else {
-					JOptionPane.showMessageDialog(null, "Opção inválida !");
-				}
+				String sexo = JOptionPane.showInputDialog("Qual seu gênero ?\n[M] - Masculino\n[F] - Feminino");
+				cliente.setSexo(sexo.toUpperCase().charAt(0));
 				
+				//System.out.println(sexo.toUpperCase());
+			
 				Endereco endereco = new Endereco();
 				String rua = JOptionPane.showInputDialog("Nome da rua onde reside: ");
 				endereco.setRua(rua);
@@ -46,6 +42,8 @@ public class Executar {
 				String cidade = JOptionPane.showInputDialog("Nome da cidade: ");
 				endereco.setCidade(cidade);
 				
+				cliente.setEndereco(endereco);
+				
 				Contato contato = new Contato();
 				
 				String email = JOptionPane.showInputDialog("E-mail: ");
@@ -57,6 +55,8 @@ public class Executar {
 				String celular = JOptionPane.showInputDialog("Celular:" );
 				contato.setCelular(celular);
 				
+				cliente.setContato(contato);
+				
 				JOptionPane.showMessageDialog(null, "***** DADOS BANCÁRIOS *****");
 				
 				Conta conta = new Conta();
@@ -67,14 +67,15 @@ public class Executar {
 				String numeroConta = JOptionPane.showInputDialog("Conta: ");
 				conta.setAgencia(Integer.parseInt(numeroConta));
 				
-				conta.setConta(conta);
-				cliente.setContato(contato);
-				cliente.setEndereco(endereco);
+				conta.setSaldo(0);
+				
+				cliente.setConta(conta);
+				
 				banco.cadastrar(cliente);
 				break;
 				
 			case "2":
-				
+				banco.mostrar(cliente);		
 			case "3":
 				
 			case "4":

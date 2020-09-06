@@ -10,7 +10,7 @@ public class Cliente {
     public Cliente (){
 
     }
-
+    
 	public String getNome(){
         return nome;
     }
@@ -62,9 +62,13 @@ public class Cliente {
     public Conta getConta() {
 		return conta;
 	}
-
+    
 	public void setConta(Conta conta) {
 		this.conta = conta;
+	}
+	
+	public String toString() {
+		return String.format("\nNome: %s \nAgência: %d \nConta: %d\n------------------------", this.getNome() , this.getConta().getAgencia() , this.getConta().getNumeroConta());
 	}
 
 }

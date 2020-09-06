@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 public class Executar {
 	public static void main (String[] args){
-		//Scanner input = new Scanner(System.in);
+		
 		JOptionPane.showMessageDialog(null, "****** Bem vindo ao banco JAVOU ! ******");
 		
 		boolean exit = false;
@@ -65,19 +65,27 @@ public class Executar {
 				conta.setAgencia(Integer.parseInt(agencia));
 				
 				String numeroConta = JOptionPane.showInputDialog("Conta: ");
-				conta.setAgencia(Integer.parseInt(numeroConta));
-				
+				conta.setNumeroConta(Integer.parseInt(numeroConta));
+
 				conta.setSaldo(0);
 				
 				cliente.setConta(conta);
-				
 				banco.cadastrar(cliente);
 				break;
 				
 			case "2":
-				banco.mostrar(cliente);		
-			case "3":
-				
+				banco.mostrar();
+				break;
+			case "3":							
+				String agenciaAcesso = JOptionPane.showInputDialog("Agência: ");
+				String numeroContaAcesso = JOptionPane.showInputDialog("Conta: ");
+				Conta contaAcesso = banco.findConta(Integer.parseInt(agenciaAcesso), Integer.parseInt(numeroContaAcesso));
+				if(contaAcesso != null) {
+					banco.menuUsuario(contaAcesso);
+				}else {
+					JOptionPane.showMessageDialog(null, "Conta não encontrada ):");
+				}
+				break;
 			case "4":
 				exit = true;
 				break;
